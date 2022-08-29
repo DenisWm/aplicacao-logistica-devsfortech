@@ -1,0 +1,69 @@
+<section class="page-section" id="portfolio">
+    <div>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cadastro de Cliente</h2>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+      <form #form class="container" (submit)="salvar()">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.nome" id="nome" placeholder="Digite o nome">
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" name="cpf" [(ngModel)]="cliente.cpf" id="cpf" placeholder="Digite o cpf">
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="rua">Rua</label>
+              <input type="text" class="form-control" name="rua" [(ngModel)]="cliente.rua" id="rua" placeholder="Digite a rua">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="numero">Numero</label>
+              <input type="text" class="form-control" name="numero" id="numero" [(ngModel)]="cliente.numero" placeholder="Digite o numero">
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+              <label for="cidade">Cidade</label>
+              <input type="text" class="form-control" name="cidade" [(ngModel)]="cliente.cidade" placeholder="Digite a cidade" id="cidade">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="estado">Estado</label>
+              <select id="estado" class="form-control" name="estado" [(ngModel)]="cliente.estado">
+                  <option selected>[Selecione]</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+              </select>
+            </div>
+          <hr>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </section>
